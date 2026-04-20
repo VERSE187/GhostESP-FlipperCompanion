@@ -4063,11 +4063,11 @@ static bool menu_input_handler(InputEvent* event, void* context) {
 // 6675636B796F7564656B69
 
 void show_wifi_gtk_menu(AppState* state) {
-    submenu_reset(state->submenu);
-    submenu_set_header(state->submenu, "GTK Abuse Test");
-    submenu_add_item(state->submenu, "Start GTK Test", 0, submenu_callback, state);
-    submenu_add_item(state->submenu, "Stop", 1, submenu_callback, state);
-    view_dispatcher_switch_to_view(state->view_dispatcher, AppView_Submenu);
+    submenu_reset(state->wifi_attack_menu);
+    submenu_set_header(state->wifi_attack_menu, "GTK Abuse Test");
+    submenu_add_item(state->wifi_attack_menu, "Start GTK Test", 0, submenu_callback, state);
+    submenu_add_item(state->wifi_attack_menu, "Stop", 1, submenu_callback, state);
+    view_dispatcher_switch_to_view(state->view_dispatcher, AppView_WifiAttack);
 }
 
 void handle_gtk_menu(AppState* state, uint32_t index) {
