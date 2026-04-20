@@ -4067,7 +4067,7 @@ void show_wifi_gtk_menu(AppState* state) {
     submenu_set_header(state->wifi_attack_menu, "GTK Abuse Test");
     submenu_add_item(state->wifi_attack_menu, "Start GTK Test", 0, submenu_callback, state);
     submenu_add_item(state->wifi_attack_menu, "Stop", 1, submenu_callback, state);
-    view_dispatcher_switch_to_view(state->view_dispatcher, AppView_WifiAttack);
+    view_dispatcher_switch_to_view(state->view_dispatcher, 33);
 }
 
 void handle_gtk_menu(AppState* state, uint32_t index) {
